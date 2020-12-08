@@ -1,8 +1,8 @@
 docker run -d \
-  --name=sonarr \
-  -p 8989:8989 \
-  -v /internal/config/sonarr/:/config \
+  --name=radarr \
+  -p 7878:7878 \
+  -v /internal/config/radarr/:/config \
   -v /storage:/storage \
   -v /storage/downloads:/downloads \
   --restart unless-stopped \
-  ghcr.io/linuxserver/sonarr
+  ghcr.io/linuxserver/radarr

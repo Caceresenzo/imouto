@@ -7,6 +7,6 @@ then
 fi
 
 docker run --rm -it \
-  -v /storage/internal/config/openvpn-server:/etc/openvpn \
+  -v /redundant/internal/config/openvpn-server:/etc/openvpn \
   kylemanna/openvpn \
   easyrsa build-client-full "$CLIENT_NAME" nopass

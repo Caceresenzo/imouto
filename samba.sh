@@ -8,6 +8,7 @@ docker run -d \
   -v /storage:/storage \
   -v /redundant:/redundant \
   -e NMBD=true \
+  --label "com.centurylinklabs.watchtower.enable=false" \
   --restart unless-stopped \
   dperson/samba \
   -n \

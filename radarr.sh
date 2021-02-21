@@ -1,7 +1,7 @@
 docker run -d \
   --name=radarr \
   -p 7878:7878 \
-  -v /internal/config/radarr/:/config \
+  -v /redundant/internal/config/radarr/:/config \
   -v /storage:/storage \
   -v /storage/downloads:/downloads \
   --restart unless-stopped \

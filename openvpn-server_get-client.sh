@@ -7,6 +7,6 @@ then
 fi
 
 docker run --rm -it \
-  -v /storage/internal/config/openvpn-server:/etc/openvpn \
+  -v /redundant/internal/config/openvpn-server:/etc/openvpn \
   kylemanna/openvpn \
   ovpn_getclient "$CLIENT_NAME" > "$CLIENT_NAME".ovpn

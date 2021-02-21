@@ -8,6 +8,7 @@ docker run -it -d \
   --dns 1.1.1.1 \
   --cap-add=NET_ADMIN \
   --device /dev/net/tun \
-  -v /storage/internal/vpn:/vpn \
+  -v /redundant/internal/vpn:/vpn \
+  --label "com.centurylinklabs.watchtower.enable=false" \
   --restart unless-stopped \
   dperson/openvpn-client

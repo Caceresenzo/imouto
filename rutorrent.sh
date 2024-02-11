@@ -1,6 +1,7 @@
 docker run -d \
   --name=rutorrent \
-  -v /redundant/internal/config/rutorrent:/config \
+  -v /redundant/internal/configuration/rutorrent:/config \
+  -v /storage/downloads:/downloads \
   -v /storage:/storage \
   --net=container:vpn \
   --restart unless-stopped \

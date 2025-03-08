@@ -61,22 +61,6 @@ locals {
         cloudflare_zero_trust_access_group.dorian.id,
       ],
     },
-    {
-      name    = "esxi",
-      service = "https://192.168.0.6",
-      icon    = "esxi.png",
-      groups = [
-        cloudflare_zero_trust_access_group.enzo.id,
-      ],
-    },
-    {
-      name    = "ilo",
-      service = "https://192.168.0.2",
-      icon    = "ilo.png",
-      groups = [
-        cloudflare_zero_trust_access_group.enzo.id,
-      ],
-    },
   ]
 }
 
@@ -116,8 +100,5 @@ resource "cloudflare_zero_trust_tunnel_cloudflared_config" "imouto" {
         }
       ]
     )
-    origin_request = {
-      no_tls_verify = true
-    }
   }
 }

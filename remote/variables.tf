@@ -13,3 +13,7 @@ variable "google_idp_id" {
 variable "imouto_tunnel_id" {
   type = string
 }
+
+variable "control_tower_tunnel_id" {
+  type = string
+}

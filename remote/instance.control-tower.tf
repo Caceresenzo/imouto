@@ -1,6 +1,7 @@
 locals {
   control_tower_applications = [
     {
+      type    = "self_hosted"
       name    = "uptime-kuma",
       service = "http://172.17.0.1:3001",
       icon    = "uptime-kuma.svg",
@@ -9,6 +10,7 @@ locals {
       ],
     },
     {
+      type    = "ssh"
       name    = "ssh",
       service = "ssh://172.17.0.1:22",
       icon    = "ssh.svg",
@@ -17,6 +19,7 @@ locals {
       ],
     },
     {
+      type    = "self_hosted"
       name    = "esxi",
       service = "https://192.168.0.6",
       icon    = "esxi.png",
@@ -25,6 +28,7 @@ locals {
       ],
     },
     {
+      type    = "self_hosted"
       name    = "ilo",
       service = "https://192.168.0.2",
       icon    = "ilo.png",
@@ -47,6 +51,7 @@ module "control_tower_applications" {
   google_idp_id = var.google_idp_id
   tunnel_id     = var.control_tower_tunnel_id
 
+  type             = each.value.type
   instance_name    = "control-tower"
   application_name = each.value.name
   icon_file        = each.value.icon

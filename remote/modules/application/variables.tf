@@ -14,6 +14,11 @@ variable "tunnel_id" {
   type = string
 }
 
+variable "type" {
+  type    = string
+  default = "self_hosted"
+}
+
 variable "instance_name" {
   type = string
 }

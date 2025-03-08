@@ -18,7 +18,7 @@ locals {
 resource "cloudflare_zero_trust_access_application" "default" {
   account_id = var.account_id
 
-  type   = "self_hosted"
+  type   = var.type
   name   = "${var.application_name} (${var.instance_name})"
   domain = local.full_domain
 

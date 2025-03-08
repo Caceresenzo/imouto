@@ -1,0 +1,100 @@
+{
+    "users": [
+        {
+            "name": "enzo",
+            "email": "caceresenzo1502@gmail.com"
+        },
+        {
+            "name": "dorian",
+            "email": "thecaceresenzo@gmail.com"
+        }
+    ],
+    "services": [
+        {
+            "name": "deluge",
+            "display_name": "Deluge",
+            "service": "http://172.17.0.1:8112",
+            "icon": "deluge.png",
+            "access": [
+                "enzo",
+                "dorian"
+            ]
+        },
+        {
+            "name": "filebrowser",
+            "display_name": "FileBrowser",
+            "service": "http://172.17.0.1:5082",
+            "icon": "filebrowser.svg",
+            "access": [
+                "enzo",
+                "dorian"
+            ]
+        },
+        {
+            "name": "grafana",
+            "display_name": "Grafana",
+            "service": "http://172.17.0.1:3000",
+            "icon": "grafana.svg",
+            "access": [
+                "enzo"
+            ]
+        },
+        {
+            "name": "plex",
+            "display_name": "Plex",
+            "service": "http://172.17.0.1:32400",
+            "icon": "plex.svg",
+            "access": [
+                "enzo"
+            ]
+        },
+        {
+            "name": "qbittorrent",
+            "display_name": "qBittorrent",
+            "service": "http://172.17.0.1:8090",
+            "icon": "qbittorrent.svg",
+            "access": [
+                "enzo",
+                "dorian"
+            ]
+        },
+        {
+            "name": "sonarr",
+            "display_name": "Sonarr",
+            "service": "http://172.17.0.1:8989",
+            "icon": "sonarr.png",
+            "access": [
+                "enzo",
+                "dorian"
+            ]
+        },
+        {
+            "name": "syncthing",
+            "display_name": "Syncthing",
+            "service": "http://172.17.0.1:8384",
+            "icon": "syncthing.svg",
+            "access": [
+                "enzo",
+                "dorian"
+            ]
+        },
+        {
+            "name": "esxi",
+            "display_name": "ESXi",
+            "service": "https://192.168.0.6",
+            "icon": "esxi.png",
+            "access": [
+                "enzo"
+            ]
+        },
+        {
+            "name": "ilo",
+            "display_name": "iLO",
+            "service": "https://192.168.0.2",
+            "icon": "ilo.png",
+            "access": [
+                "enzo"
+            ]
+        }
+    ]
+}

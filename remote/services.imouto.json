@@ -1,0 +1,56 @@
+[
+    {
+        "name": "deluge",
+        "displayName": "Deluge",
+        "service": "http://172.17.0.1:8112"
+    },
+    {
+        "name": "grafana",
+        "displayName": "Grafana",
+        "service": "http://172.17.0.1:3000"
+    },
+    {
+        "name": "plex",
+        "displayName": "Plex",
+        "service": "http://172.17.0.1:32400"
+    },
+    {
+        "name": "qbittorrent",
+        "displayName": "qBittorrent",
+        "service": "http://172.17.0.1:8090"
+    },
+    {
+        "name": "sonarr",
+        "displayName": "Sonarr",
+        "service": "http://172.17.0.1:8989"
+    },
+    {
+        "name": "syncthing",
+        "displayName": "Syncthing",
+        "service": "http://172.17.0.1:8384"
+    },
+    {
+        "name": "filebrowser",
+        "displayName": "FileBrowser",
+        "service": "http://172.17.0.1:5082"
+    },
+    
+    {
+        "name": "ssh",
+        "displayName": "SSH",
+        "service": "ssh://172.17.0.1:22"
+    },
+
+    {
+        "name": "ilo",
+        "displayName": "iLO",
+        "service": "https://192.168.0.2",
+        "no_tls_verify": true 
+    },
+    {
+        "name": "esxi",
+        "displayName": "ESXi",
+        "service": "https://192.168.0.6",
+        "no_tls_verify": true 
+    }
+]

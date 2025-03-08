@@ -1,15 +1,26 @@
-resource "cloudflare_zero_trust_access_group" "users" {
-  for_each = local.user_map
+resource "cloudflare_zero_trust_access_group" "enzo" {
+  account_id = var.account_id
+  name       = "enzo"
 
-  account_id = data.cloudflare_account.current.account_id
-
-  name       = each.key
   is_default = true
 
   include = [
     {
       email = {
-        email = each.value.email
+        email = "caceresenzo1502@gmail.com"
+      }
+    }
+  ]
+}
+
+resource "cloudflare_zero_trust_access_group" "dorian" {
+  account_id = var.account_id
+  name       = "dorian"
+
+  include = [
+    {
+      email = {
+        email = "thecaceresenzo@gmail.com"
       }
     }
   ]

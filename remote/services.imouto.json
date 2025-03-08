@@ -10,6 +10,11 @@
         "service": "http://172.17.0.1:3000"
     },
     {
+        "name": "test--grafana",
+        "displayName": "Grafana (test)",
+        "service": "http://172.17.0.1:3000"
+    },
+    {
         "name": "plex",
         "displayName": "Plex",
         "service": "http://172.17.0.1:32400"

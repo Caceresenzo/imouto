@@ -126,3 +126,79 @@ resource "cloudflare_zero_trust_tunnel_cloudflared_config" "imouto" {
     )
   }
 }
+
+locals {
+  imouto_filebrowser_full_domain_with_path = "${module.imouto_applications["filebrowser"].full_domain}/api/public/dl/"
+}
+
+resource "cloudflare_zero_trust_access_application" "imouto_filebrowser_public" {
+  account_id = var.account_id
+
+  type   = "self_hosted"
+  name   = "filebrowser public (imouto)"
+  domain = local.imouto_filebrowser_full_domain_with_path
+
+  self_hosted_domains = [
+    local.imouto_filebrowser_full_domain_with_path
+  ]
+
+  destinations = [
+    {
+      type = "public"
+      uri  = local.imouto_filebrowser_full_domain_with_path
+    }
+  ]
+
+  app_launcher_visible = false
+
+  policies = [
+    {
+      name     = "default"
+      decision = "bypass"
+      include = [
+        {
+          everyone = {}
+        }
+      ]
+    }
+  ]
+
+  tags = [cloudflare_zero_trust_access_tag.imouto.name]
+}
+
+resource "cloudflare_ruleset" "sonarr_auth" {
+  zone_id = data.cloudflare_zone.default.zone_id
+  kind    = "zone"
+  name    = "default"
+  phase   = "http_request_late_transform"
+  rules = [
+    {
+      description = "sonarr auth"
+      enabled     = true
+      expression  = "(http.host eq \"${module.imouto_applications["sonarr"].full_domain}\")"
+      action      = "rewrite"
+      action_parameters = {
+        headers = {
+          authorization = {
+            operation = "set"
+            value     = "Basic YWRtaW46cGFzc3dvcmQ="
+          }
+        }
+      }
+    },
+    {
+      description = "filebrowser auth"
+      enabled     = true
+      expression  = "(http.host eq \"${module.imouto_applications["filebrowser"].full_domain}\")"
+      action      = "rewrite"
+      action_parameters = {
+        headers = {
+          "X-Username" = {
+            operation = "set"
+            value     = "admin"
+          }
+        }
+      }
+    }
+  ]
+}

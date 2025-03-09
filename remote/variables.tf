@@ -17,3 +17,11 @@ variable "imouto_tunnel_id" {
 variable "control_tower_tunnel_id" {
   type = string
 }
+
+variable "enzo_email" {
+  type = string
+}
+
+variable "dorian_email" {
+  type = string
+}

@@ -7,7 +7,7 @@ resource "cloudflare_zero_trust_access_group" "enzo" {
   include = [
     {
       email = {
-        email = "caceresenzo1502@gmail.com"
+        email = var.enzo_email
       }
     }
   ]
@@ -20,7 +20,7 @@ resource "cloudflare_zero_trust_access_group" "dorian" {
   include = [
     {
       email = {
-        email = "thecaceresenzo@gmail.com"
+        email = var.dorian_email
       }
     }
   ]

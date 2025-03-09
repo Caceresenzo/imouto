@@ -25,3 +25,7 @@ variable "enzo_email" {
 variable "dorian_email" {
   type = string
 }
+
+variable "maxence_email" {
+  type = string
+}

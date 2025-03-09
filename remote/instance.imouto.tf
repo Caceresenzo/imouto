@@ -18,6 +18,7 @@ locals {
       groups = [
         cloudflare_zero_trust_access_group.enzo.id,
         cloudflare_zero_trust_access_group.dorian.id,
+        cloudflare_zero_trust_access_group.maxence.id,
       ],
     },
     {

@@ -25,3 +25,16 @@ resource "cloudflare_zero_trust_access_group" "dorian" {
     }
   ]
 }
+
+resource "cloudflare_zero_trust_access_group" "maxence" {
+  account_id = var.account_id
+  name       = "maxence"
+
+  include = [
+    {
+      email = {
+        email = var.maxence_email
+      }
+    }
+  ]
+}

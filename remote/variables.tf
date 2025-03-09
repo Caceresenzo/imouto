@@ -18,6 +18,10 @@ variable "control_tower_tunnel_id" {
   type = string
 }
 
+variable "marais_tunnel_id" {
+  type = string
+}
+
 variable "enzo_email" {
   type = string
 }
@@ -27,5 +31,9 @@ variable "dorian_email" {
 }
 
 variable "maxence_email" {
+  type = string
+}
+
+variable "sandrine_email" {
   type = string
 }

@@ -38,3 +38,16 @@ resource "cloudflare_zero_trust_access_group" "maxence" {
     }
   ]
 }
+
+resource "cloudflare_zero_trust_access_group" "sandrine" {
+  account_id = var.account_id
+  name       = "sandrine"
+
+  include = [
+    {
+      email = {
+        email = var.sandrine_email
+      }
+    }
+  ]
+}

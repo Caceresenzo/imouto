@@ -35,7 +35,7 @@ resource "cloudflare_zero_trust_access_application" "default" {
 
   http_only_cookie_attribute = true
 
-  logo_url             = "https://raw.githubusercontent.com/Caceresenzo/imouto/refs/heads/master/remote/icons/${var.icon_file}"
+  logo_url             = var.icon_file != null ? "https://raw.githubusercontent.com/Caceresenzo/imouto/refs/heads/master/remote/icons/${var.icon_file}" : null
   app_launcher_visible = true
 
   allowed_idps              = [var.google_idp_id]

@@ -55,7 +55,7 @@ resource "cloudflare_zero_trust_access_application" "default" {
     }
   ]
 
-  tags = []
+  tags = var.tags
 }
 
 resource "cloudflare_dns_record" "default" {

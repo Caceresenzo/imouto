@@ -97,6 +97,12 @@ module "imouto_applications" {
   application_name = each.value.name
   icon_file        = each.value.icon
   group_ids        = each.value.groups
+  tags             = [cloudflare_zero_trust_access_tag.imouto.name]
+}
+
+resource "cloudflare_zero_trust_access_tag" "imouto" {
+  account_id = data.cloudflare_account.current.account_id
+  name       = "imouto"
 }
 
 resource "cloudflare_zero_trust_tunnel_cloudflared_config" "imouto" {

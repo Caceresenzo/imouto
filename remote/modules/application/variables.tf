@@ -34,3 +34,8 @@ variable "icon_file" {
 variable "group_ids" {
   type = list(string)
 }
+
+variable "tags" {
+  type    = list(string)
+  default = []
+}

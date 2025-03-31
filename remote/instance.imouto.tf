@@ -166,7 +166,7 @@ resource "cloudflare_zero_trust_access_application" "imouto_filebrowser_public" 
   tags = [cloudflare_zero_trust_access_tag.imouto.name]
 }
 
-resource "cloudflare_ruleset" "sonarr_auth" {
+resource "cloudflare_ruleset" "auth" {
   zone_id = data.cloudflare_zone.default.zone_id
   kind    = "zone"
   name    = "default"

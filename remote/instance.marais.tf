@@ -23,8 +23,17 @@ locals {
     {
       type    = "self_hosted"
       name    = "ilo--imouto--via",
-      service = "https://192.168.0.2",
+      service = "https://192.168.0.132",
       icon    = "ilo.png",
+      groups = [
+        cloudflare_zero_trust_access_group.enzo.id,
+      ],
+    },
+    {
+      type    = "self_hosted"
+      name    = "esxi--imouto--via",
+      service = "https://192.168.0.6",
+      icon    = "esxi.png",
       groups = [
         cloudflare_zero_trust_access_group.enzo.id,
       ],

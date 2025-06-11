@@ -21,6 +21,16 @@ locals {
       ],
     },
     {
+      type    = "vnc"
+      name    = "vnc",
+      service = "vnc://172.17.0.1:5901",
+      icon    = "vnc.png",
+      groups = [
+        cloudflare_zero_trust_access_group.enzo.id,
+        cloudflare_zero_trust_access_group.sandrine.id,
+      ],
+    },
+    {
       type    = "self_hosted"
       name    = "ilo--imouto--via",
       service = "https://192.168.0.132",

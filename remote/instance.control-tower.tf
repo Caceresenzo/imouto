@@ -21,7 +21,7 @@ locals {
     {
       type    = "self_hosted"
       name    = "esxi",
-      service = "https://192.168.0.6",
+      service = "https://192.168.1.28",
       icon    = "esxi.png",
       groups = [
         cloudflare_zero_trust_access_group.enzo.id,
@@ -30,7 +30,7 @@ locals {
     {
       type    = "self_hosted"
       name    = "ilo",
-      service = "https://192.168.0.2",
+      service = "https://192.168.1.27",
       icon    = "ilo.png",
       groups = [
         cloudflare_zero_trust_access_group.enzo.id,

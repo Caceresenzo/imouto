@@ -51,3 +51,16 @@ resource "cloudflare_zero_trust_access_group" "sandrine" {
     }
   ]
 }
+
+resource "cloudflare_zero_trust_access_group" "xavier" {
+  account_id = var.account_id
+  name       = "xavier"
+
+  include = [
+    {
+      email = {
+        email = var.xavier_email
+      }
+    }
+  ]
+}

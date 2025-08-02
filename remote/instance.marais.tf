@@ -37,6 +37,7 @@ locals {
       icon    = "ilo.png",
       groups = [
         cloudflare_zero_trust_access_group.enzo.id,
+        cloudflare_zero_trust_access_group.xavier.id,
       ],
     },
     {
@@ -46,6 +47,7 @@ locals {
       icon    = "esxi.png",
       groups = [
         cloudflare_zero_trust_access_group.enzo.id,
+        cloudflare_zero_trust_access_group.xavier.id,
       ],
     },
   ]

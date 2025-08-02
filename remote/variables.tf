@@ -37,3 +37,7 @@ variable "maxence_email" {
 variable "sandrine_email" {
   type = string
 }
+
+variable "xavier_email" {
+  type = string
+}

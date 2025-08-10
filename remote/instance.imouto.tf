@@ -78,6 +78,16 @@ locals {
         cloudflare_zero_trust_access_group.dorian.id,
       ],
     },
+    {
+      type    = "self_hosted"
+      name    = "copyparty",
+      service = "http://172.17.0.1:3923",
+      icon    = "copyparty.svg",
+      groups = [
+        cloudflare_zero_trust_access_group.enzo.id,
+        cloudflare_zero_trust_access_group.dorian.id,
+      ],
+    },
   ]
 }
 

@@ -64,3 +64,16 @@ resource "cloudflare_zero_trust_access_group" "xavier" {
     }
   ]
 }
+
+resource "cloudflare_zero_trust_access_group" "jules" {
+  account_id = var.account_id
+  name       = "jules"
+
+  include = [
+    {
+      email = {
+        email = var.jules_email
+      }
+    }
+  ]
+}

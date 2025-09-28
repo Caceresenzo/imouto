@@ -41,3 +41,7 @@ variable "sandrine_email" {
 variable "xavier_email" {
   type = string
 }
+
+variable "jules_email" {
+  type = string
+}

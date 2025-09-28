@@ -33,7 +33,7 @@ locals {
     {
       type    = "self_hosted"
       name    = "ilo--imouto--via",
-      service = "https://192.168.0.132",
+      service = "https://192.168.0.118",
       icon    = "ilo.png",
       groups = [
         cloudflare_zero_trust_access_group.enzo.id,
